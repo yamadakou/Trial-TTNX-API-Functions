@@ -37,14 +37,34 @@ TTNXのDockerHubで公開されているDockerイメージをもとにAzure Cont
 ## 提供するWebAPI
 ### TTNX環境のコンテナアプリをデプロイ
 POST /trial-ttnx
+
 #### パラメータ
 | Name | Value |
 |---|---|
-| userName | ユーザー名の文字列。この名前でリソースグループを作成する。リソースグループに存在する名前を指定するとエラー。 |
+| userName | ユーザー名の文字列。この名前でリソースグループを作成する。すでに存在する名前を指定するとエラー。 |
+
+#### レスポンス
+| Name | Value |
+|---|---|
+| Message | 正常終了、もしくはエラー時のメッセージ。 |
+| WebAppFQDN | デプロイしたWebアプリのFQDN。正常終了時のみ返す。 |
+| ResourceGroupName | 作成したリソースグループの名前。正常終了時のみ返す。 |
+| VNetName | 仮想ネットワークの名前。正常終了時のみ返す。 |
+| SubnetName | サブネットの名前。正常終了時のみ返す。 |
+
 #### 呼び出しイメージ
 POST https://・・・/trial-ttnx
 ```
 {
   "userName": "Test-Customer-A"
+}
+
+200 OK
+{
+    "WebAppFQDN": "web.・・・.japaneast.azurecontainerapps.io",
+    "ResourceGroupName": "Test-Customer-A",
+    "VNetName": "Test-Customer-A-VNet",
+    "SubnetName": "Test-Customer-A-Subnet",
+    "Message": "Container Apps deployed successfully."
 }
 ```
