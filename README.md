@@ -9,11 +9,18 @@ TTNXのDockerHubで公開されているDockerイメージをもとにAzure Cont
   * https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-develop-vs
 
 ## 事前準備
+* ユーザー割り当てマネージドIDを作成する。
+  * スコープ：サブスクリプション
+  * リージョン：東日本
+  * 権限：共同作成者 or 所有者
+  * 参考：https://learn.microsoft.com/ja-jp/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity
+
 * 環境変数を設定する。
   | Name | Value |
   |---|---|
   | SUBSCRIPTION_ID | サブスクリプションID |
   | DB_PASSWORD | DBに接続するパスワード |
+  | AZURE_CLIENT_ID | ユーザー割り当てマネージドIDのクライアントID |
 
 * Azure Functionsの環境変数からアプリ設定を行う。
   * 設定方法については [MSドキュメント参照](https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-how-to-use-azure-function-app-settings)
