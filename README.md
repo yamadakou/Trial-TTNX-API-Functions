@@ -88,7 +88,7 @@ Body
 
 ##### デプロイ中の場合
 * `runtimeStatus` が `Running` となる。
-* `customStatus` にリソース作成などの状況を確認を表すメッセージが格納。
+* `customStatus` にリソース作成などの状況を表すメッセージが格納。
 
 ```
 GET "http://{host;port}/runtime/webhooks/durabletask/instances/{関数キー}?code=・・・
