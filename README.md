@@ -43,7 +43,7 @@ TTNXのDockerHubで公開されているDockerイメージをもとにAzure Cont
 
 ## 提供するWebAPI
 ### TTNX環境のコンテナアプリをデプロイ
-POST /trial-ttnx
+POST /TrialTTNXService_HttpStart
 
 #### パラメータ
 | Name | Value |
