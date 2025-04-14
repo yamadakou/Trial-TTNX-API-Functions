@@ -53,11 +53,8 @@ POST /TrialTTNXService_HttpStart
 #### レスポンス
 | Name | Value |
 |---|---|
-| Message | 正常終了、もしくはエラー時のメッセージ。 |
-| WebAppFQDN | デプロイしたWebアプリのFQDN。正常終了時のみ返す。 |
-| ResourceGroupName | 作成したリソースグループの名前。正常終了時のみ返す。 |
-| VNetName | 仮想ネットワークの名前。正常終了時のみ返す。 |
-| SubnetName | サブネットの名前。正常終了時のみ返す。 |
+| Id | 関数キー |
+| StatusQueryGetUri | TTNXコンテナをデプロイするためのリソース作成やデプロイ処理の状況を確認するためのURLを返す。 |
 
 #### 呼び出しイメージ
 1. TTNX環境コンテナアプリのデプロイを依頼
