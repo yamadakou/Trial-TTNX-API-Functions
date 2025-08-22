@@ -15,6 +15,9 @@ TTNXのDockerHubで公開されているDockerイメージをもとにAzure Cont
   * 権限：共同作成者
   * 参考：https://learn.microsoft.com/ja-jp/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity
 
+* ユーザー割り当て済みIDにユーザー割り当てマネージドIDを追加する。
+  * 参考：https://learn.microsoft.com/ja-jp/azure/azure-web-pubsub/howto-use-managed-identity#add-a-user-assigned-identity 
+
 * 環境変数を設定する。
   | Name | Value |
   |---|---|
